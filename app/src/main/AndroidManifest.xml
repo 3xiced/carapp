@@ -24,6 +24,12 @@
         </activity>
         <activity android:name=".NoInternetActivity" />
         <activity android:name=".OnboardingActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SigninActivity" />
+        <activity android:name=".SignupStep1Activity" />
+        <activity android:name=".SignupStep2Activity" />
+        <activity android:name=".SignupStep3Activity" />
+        <activity android:name=".SignupConfirmationActivity" />
 
     </application>
 

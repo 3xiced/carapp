@@ -1,18 +1,19 @@
 package com.taxi.app
+
 import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
 import android.content.Intent
 import android.os.Bundle
 import android.view.animation.AccelerateDecelerateInterpolator
 import androidx.appcompat.app.AppCompatActivity
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import kotlinx.coroutines.*
 
-class SplashActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+        setContentView(R.layout.activity_login)
 
         val titleText = findViewById<TextView>(R.id.titleText)
         val subtitleText = findViewById<TextView>(R.id.subtitleText)
@@ -24,8 +25,7 @@ class SplashActivity : AppCompatActivity() {
             PropertyValuesHolder.ofFloat("alpha", 0f, 1f),
             PropertyValuesHolder.ofFloat("translationX", -50f, 0f)
         ).apply {
-            duration = 800
-            interpolator = AccelerateDecelerateInterpolator()
+            duration = 1
             start()
         }
 
@@ -34,31 +34,28 @@ class SplashActivity : AppCompatActivity() {
             PropertyValuesHolder.ofFloat("alpha", 0f, 1f),
             PropertyValuesHolder.ofFloat("translationX", -50f, 0f)
         ).apply {
-            duration = 1000
-            startDelay = 300
-            interpolator = AccelerateDecelerateInterpolator()
+            duration = 1
             start()
         }
 
         ObjectAnimator.ofFloat(logoImage, "alpha", 0f, 1f).apply {
-            duration = 1200
-            startDelay = 600
+            duration = 1
             start()
         }
 
-        CoroutineScope(Dispatchers.Main).launch {
-            delay(3000)
-            val isConnected = withContext(Dispatchers.IO) { NetworkUtils.isInternetAvailable() }
-            print(isConnected);
-            if (isConnected) {
-                val sharedPrefs = getSharedPreferences("app_prefs", MODE_PRIVATE)
-                val isOnboardingComplete = sharedPrefs.getBoolean("onboarding_complete", false)
-                val nextActivity = if (isOnboardingComplete) LoginActivity::class.java else OnboardingActivity::class.java
-                startActivity(Intent(this@SplashActivity, nextActivity))
-            } else {
-                startActivity(Intent(this@SplashActivity, NoInternetActivity::class.java))
-            }
-            finish()
+
+        // Получаем ссылки на кнопки из разметки
+        val btnLogin = findViewById<Button>(R.id.btnLogin)
+        val btnRegister = findViewById<Button>(R.id.btnRegister)
+
+        // Обработчик кнопки "@string/login_button" - открываем SigninActivity
+        btnLogin.setOnClickListener {
+            startActivity(Intent(this, SigninActivity::class.java))
+        }
+
+        // Обработчик кнопки "@string/signup_button" - открываем SignupActivity
+        btnRegister.setOnClickListener {
+            startActivity(Intent(this, SignupStep1Activity::class.java))
         }
     }
 }

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Создать аккаунт"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#271343"
+            android:gravity="center"/>
+
+        <!-- Номер водительского удостоверения -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/licenseNumberLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:hint="Номер водительского удостоверения">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLicenseNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Дата выдачи -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/licenseIssueDateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Дата выдачи">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLicenseIssueDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Placeholder для фото водительского удостоверения с инструкцией -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/ivLicensePhoto"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/placeholder_image"
+                android:scaleType="centerCrop"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Загрузить фото водительского удостоверения" />
+
+            <TextView
+                android:id="@+id/tvLicenseInstruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Приложите фото водительского удостоверения"
+                android:textColor="#271343"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp"/>
+        </LinearLayout>
+
+        <!-- Placeholder для фото паспорта с инструкцией -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/ivPassportPhoto"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/placeholder_image"
+                android:scaleType="centerCrop"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Загрузить фото паспорта" />
+
+            <TextView
+                android:id="@+id/tvPassportInstruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Приложите ваш паспорт"
+                android:textColor="#271343"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp"/>
+        </LinearLayout>
+
+        <!-- Кнопка Далее -->
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Далее"
+            android:layout_marginTop="24dp"/>
+    </LinearLayout>
+</ScrollView>

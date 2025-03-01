@@ -23,13 +23,13 @@ class OnboardingActivity : AppCompatActivity() {
 
         val fragments = listOf(
             OnboardingFragment.newInstance(
-                R.drawable.carsharing, "Аренда автомобилей", "Открой для себя удобный и доступный способ передвижения"
+                R.drawable.carsharing, "@string/onboarding_1_t", "@string/onboarding_1_d"
             ),
             OnboardingFragment.newInstance(
-                R.drawable.safety, "Безопасно и удобно", "Арендуй автомобиль и наслаждайся его удобством"
+                R.drawable.safety, "@string/onboarding_2_t", "@string/onboarding_2_d"
             ),
             OnboardingFragment.newInstance(
-                R.drawable.sale, "Лучшие предложения", "Выбирай понравившееся среди сотни доступных автомобилей"
+                R.drawable.sale, "@string/onboarding_3_t", "@string/onboarding_3_d"
             )
         )
 

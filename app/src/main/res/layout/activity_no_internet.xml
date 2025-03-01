@@ -11,32 +11,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/internet"
-        android:contentDescription="Нет подключения"
+        android:contentDescription="@string/no_internet_short"
         android:layout_marginBottom="24dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Нет подключения к интернету"
+        android:text="@string/no_internet"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="#271343"
+        android:textColor="@color/mainColor"
         android:layout_marginBottom="8dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Проверьте подключение и повторите попытку"
+        android:text="@string/check_internet"
         android:textSize="16sp"
-        android:textColor="#271343"
+        android:textColor="@color/mainColor"
         android:layout_marginBottom="24dp"/>
 
     <Button
         android:id="@+id/retryButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Повторить попытку"
+        android:text="@string/retry_button"
         android:padding="12dp"
-        android:backgroundTint="#271343"
+        android:backgroundTint="@color/mainColor"
         android:textColor="@android:color/white"/>
 </LinearLayout>
