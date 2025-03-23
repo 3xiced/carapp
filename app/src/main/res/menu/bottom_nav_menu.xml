@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/home_selector"
+        android:title="Дом" />
+    <item
+        android:id="@+id/navigation_featured"
+        android:icon="@drawable/featured_selector"
+        android:title="Избранное"
+        />
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/settings_selector"
+        android:title="Настройки" />
+</menu>

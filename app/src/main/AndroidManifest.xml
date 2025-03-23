@@ -30,7 +30,10 @@
         <activity android:name=".SignupStep2Activity" />
         <activity android:name=".SignupStep3Activity" />
         <activity android:name=".SignupConfirmationActivity" />
-
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".NotificationsActivity" />
+        <activity android:name=".HelpActivity" />
+        <activity android:name=".InviteFriendActivity" />
     </application>
 
 

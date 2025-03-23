@@ -88,6 +88,8 @@ class SigninActivity : AppCompatActivity() {
                     }
                 }
             }
+
+            startActivity(Intent(this, MainActivity::class.java))
         }
 
         // Обработчик для кнопки "@string/login_button через Google"

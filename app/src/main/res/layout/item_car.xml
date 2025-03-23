@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="#ffffff"
+    android:layout_marginBottom="8dp">
+
+    <!-- Левая часть: информация о машине -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <!-- Модель и марка -->
+        <TextView
+            android:id="@+id/tvCarModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="S 500 Sedan"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tvCarBrand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mercedes-Benz"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Цена и характеристики -->
+        <TextView
+            android:id="@+id/tvCarPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2500Р в день"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvCarTransmission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A/T"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvCarFuel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Бензин"/>
+
+        <!-- Кнопки -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btnBook"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Забронировать"/>
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/btnDetails"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Детали"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Правая часть: фото машины -->
+    <ImageView
+        android:id="@+id/ivCarImage"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
+        android:contentDescription="Фото машины"/>
+</LinearLayout>
